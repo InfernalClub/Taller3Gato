@@ -155,10 +155,63 @@ public:
     }
 };
 
+void menuPrincipal()
+{
+    int opcion;
+    cout << "Bienvenidos al torneo del Gato!  " << endl;
+    cout << "¿Que desea hacer?" << endl;
+    cout << "1) Jugar torneo" << endl;
+    cout << "2) Reportes" << endl;
+    cout << "1) Cerrar Programa" << endl;
+    cin >> opcion;
+
+    switch (opcion) {
+    case 1:
+       
+        break;
+    case 2:
+        cout << "trepote" << endl;
+        break;
+    case 3:
+        cout << "¡Gracias por jugar torneo!" << endl;
+    default:
+        cout << "Elija una opcion valida \n" << endl;
+        menuPrincipal();
+    }
+
+}
+
+void menuTorneo()
+{
+    int opcion;
+    cout << "El torneo del Gato es por comenzar " << endl;
+    cout << "¿Cuantos participantes hay?" << endl;
+    cout << "1) 16 participantes" << endl;
+    cout << "2) 32 participantes" << endl;
+    cout << "3) 64 participantes" << endl;
+    cin >> opcion;
+
+    switch (opcion) {
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    default:
+        cout << "Elija una opcion valida \n";
+    }
+
+}
+
+
+
 int main() {
     const int playerCount = 8;
+    menuPrincipal();
     Tournament tournament(playerCount);
     tournament.runTournament();
 
+    
     return 0;
 }
